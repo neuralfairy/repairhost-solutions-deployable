@@ -78,20 +78,20 @@ const Features = () => {
       {/* Hero Section */}
       <div className="bg-gradient-hero py-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl text-center">
-            <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
+          <div className="mx-auto max-w-2xl text-center animate-fade-in">
+            <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl animate-fade-in">
               Comprehensive CRM Implementation Features
             </h1>
-            <p className="mt-6 text-xl leading-8 text-white/80">
+            <p className="mt-6 text-xl leading-8 text-white/80 animate-fade-in" style={{animationDelay: '0.2s'}}>
               Everything you need to successfully implement, optimize, and scale your CRM system for maximum business impact.
             </p>
-            <div className="mt-10 flex items-center justify-center gap-x-6">
-              <Button size="lg" className="bg-white text-primary hover:bg-white/90 shadow-button-custom" asChild>
+            <div className="mt-10 flex items-center justify-center gap-x-6 animate-fade-in" style={{animationDelay: '0.4s'}}>
+              <Button size="lg" className="bg-white text-primary hover:bg-white/90 shadow-button-custom hover-scale" asChild>
                 <a href="https://salescentri.com/get-started/book-demo" target="_blank" rel="noopener noreferrer">
                   Book Demo <ArrowRight className="ml-2 h-4 w-4" />
                 </a>
               </Button>
-              <Button size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10" asChild>
+              <Button size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10 hover-scale" asChild>
                 <a href="https://salescentri.com/solutions/use-case-navigator/demo" target="_blank" rel="noopener noreferrer">
                   <Play className="mr-2 h-4 w-4" />
                   Interactive Demo
@@ -105,9 +105,9 @@ const Features = () => {
       {/* Main Features */}
       <div className="py-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-base font-semibold leading-7 text-primary">Core Capabilities</h2>
-            <p className="mt-2 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+          <div className="mx-auto max-w-2xl text-center animate-fade-in">
+            <h2 className="text-base font-semibold leading-7 text-primary animate-fade-in">Core Capabilities</h2>
+            <p className="mt-2 text-3xl font-bold tracking-tight text-foreground sm:text-4xl animate-fade-in" style={{animationDelay: '0.2s'}}>
               Everything you need for CRM success
             </p>
           </div>
@@ -127,14 +127,14 @@ const Features = () => {
                   </div>
                 </CardHeader>
                 <CardContent>
-                  <ul className="space-y-3">
-                    {feature.details.map((detail, idx) => (
-                      <li key={idx} className="flex items-start gap-2 text-sm text-muted-foreground">
-                        <CheckCircle className="h-4 w-4 text-green-500 mt-0.5 flex-shrink-0" />
-                        {detail}
-                      </li>
-                    ))}
-                  </ul>
+                   <ul className="space-y-3">
+                     {feature.details.map((detail, idx) => (
+                       <li key={idx} className="flex items-start gap-2 text-sm text-muted-foreground animate-fade-in" style={{animationDelay: `${(index * 0.1) + (idx * 0.05)}s`}}>
+                         <CheckCircle className="h-4 w-4 text-green-500 mt-0.5 flex-shrink-0" />
+                         {detail}
+                       </li>
+                     ))}
+                   </ul>
                 </CardContent>
               </Card>
             ))}

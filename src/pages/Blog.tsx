@@ -98,20 +98,20 @@ const Blog = () => {
       {/* Hero Section */}
       <div className="bg-gradient-hero py-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl text-center">
-            <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
+          <div className="mx-auto max-w-2xl text-center animate-fade-in">
+            <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl animate-fade-in">
               CRM Implementation Insights
             </h1>
-            <p className="mt-6 text-xl leading-8 text-white/80">
+            <p className="mt-6 text-xl leading-8 text-white/80 animate-fade-in" style={{animationDelay: '0.2s'}}>
               Expert advice, best practices, and industry insights to help you succeed with your CRM implementation and optimization projects.
             </p>
-            <div className="mt-10 flex items-center justify-center gap-x-6">
-              <Button size="lg" className="bg-white text-primary hover:bg-white/90 shadow-button-custom" asChild>
+            <div className="mt-10 flex items-center justify-center gap-x-6 animate-fade-in" style={{animationDelay: '0.4s'}}>
+              <Button size="lg" className="bg-white text-primary hover:bg-white/90 shadow-button-custom hover-scale" asChild>
                 <a href="https://salescentri.com/resources/whitepapers-ebooks" target="_blank" rel="noopener noreferrer">
                   Download Resources <ArrowRight className="ml-2 h-4 w-4" />
                 </a>
               </Button>
-              <Button size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10" asChild>
+              <Button size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10 hover-scale" asChild>
                 <a href="https://salescentri.com/resources/tutorials-webinars" target="_blank" rel="noopener noreferrer">
                   <BookOpen className="mr-2 h-4 w-4" />
                   Webinars
@@ -141,15 +141,15 @@ const Blog = () => {
             <div>
               <h3 className="text-lg font-semibold text-foreground mb-4">Categories</h3>
               <div className="space-y-2">
-                {categories.map((category, index) => (
-                  <div key={category.name} className="flex items-center justify-between p-2 rounded-lg hover:bg-accent/50 cursor-pointer transition-colors">
-                    <div className="flex items-center gap-2">
-                      <category.icon className="h-4 w-4 text-primary" />
-                      <span className="text-sm text-foreground">{category.name}</span>
-                    </div>
-                    <Badge variant="secondary" className="text-xs">{category.count}</Badge>
-                  </div>
-                ))}
+                 {categories.map((category, index) => (
+                   <div key={category.name} className="flex items-center justify-between p-2 rounded-lg hover:bg-accent/50 cursor-pointer transition-all duration-200 animate-fade-in hover-scale" style={{animationDelay: `${index * 0.1}s`}}>
+                     <div className="flex items-center gap-2">
+                       <category.icon className="h-4 w-4 text-primary" />
+                       <span className="text-sm text-foreground">{category.name}</span>
+                     </div>
+                     <Badge variant="secondary" className="text-xs">{category.count}</Badge>
+                   </div>
+                 ))}
               </div>
             </div>
           </div>
