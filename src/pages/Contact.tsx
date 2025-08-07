@@ -123,7 +123,7 @@ const Contact = () => {
       {/* Contact Methods */}
       <div className="py-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl text-center mb-16">
+          <div className="mx-auto max-w-2xl text-center mb-16 animate-fade-in-up">
             <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
               Choose Your Preferred Contact Method
             </h2>
@@ -134,20 +134,20 @@ const Contact = () => {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {contactMethods.map((method, index) => (
-              <Card key={method.title} className="shadow-card-custom hover:shadow-enterprise transition-all duration-300 text-center animate-fade-in" style={{animationDelay: `${index * 0.1}s`}}>
+              <Card key={method.title} className="shadow-card-custom hover:shadow-enterprise transition-all duration-300 text-center animate-fade-in-up group hover:scale-105" style={{animationDelay: `${index * 0.1}s`}}>
                 <CardHeader>
-                  <div className="mx-auto rounded-lg bg-gradient-primary p-3 w-fit mb-4">
+                  <div className="mx-auto rounded-lg bg-gradient-primary p-3 w-fit mb-4 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
                     <method.icon className="h-6 w-6 text-white" />
                   </div>
-                  <CardTitle className="text-xl">{method.title}</CardTitle>
-                  <CardDescription className="text-base">{method.description}</CardDescription>
+                  <CardTitle className="text-xl group-hover:text-primary transition-colors duration-200">{method.title}</CardTitle>
+                  <CardDescription className="text-base group-hover:text-foreground transition-colors duration-200">{method.description}</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-2 mb-4">
                     <p className="font-semibold text-foreground">{method.details}</p>
-                    <p className="text-sm text-muted-foreground">{method.hours}</p>
+                    <p className="text-sm text-muted-foreground group-hover:text-foreground transition-colors duration-200">{method.hours}</p>
                   </div>
-                  <Button className="w-full bg-gradient-primary hover:opacity-90" asChild>
+                  <Button className="w-full bg-gradient-primary hover:opacity-90 group-hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-button-custom" asChild>
                     <a href={method.href} target="_blank" rel="noopener noreferrer">
                       {method.cta}
                     </a>
@@ -163,7 +163,7 @@ const Contact = () => {
       <div className="py-24 bg-gradient-silver">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12">
-            <div>
+            <div className="animate-slide-in-left">
               <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl mb-6">
                 Send Us a Message
               </h2>
@@ -221,7 +221,7 @@ const Contact = () => {
                       />
                     </div>
                     
-                    <Button type="submit" className="w-full bg-gradient-primary hover:opacity-90 shadow-button-custom">
+                    <Button type="submit" className="w-full bg-gradient-primary hover:opacity-90 shadow-button-custom hover:scale-105 transition-all duration-200">
                       Send Message <Send className="ml-2 h-4 w-4" />
                     </Button>
                   </form>
@@ -229,7 +229,7 @@ const Contact = () => {
               </Card>
             </div>
             
-            <div className="space-y-8">
+            <div className="space-y-8 animate-slide-in-right">
               {/* Office Information */}
               <Card className="shadow-card-custom">
                 <CardHeader>

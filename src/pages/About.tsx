@@ -127,14 +127,14 @@ const About = () => {
       {/* Mission & Vision */}
       <div className="py-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl text-center mb-16">
+          <div className="mx-auto max-w-2xl text-center mb-16 animate-fade-in-up">
             <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
               Our Mission & Vision
             </h2>
           </div>
           
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
+            <div className="animate-slide-in-left">
               <div className="mb-8">
                 <h3 className="text-2xl font-bold text-foreground mb-4">Our Mission</h3>
                 <p className="text-lg text-muted-foreground">
@@ -154,11 +154,11 @@ const About = () => {
               </div>
             </div>
             
-            <div>
+            <div className="animate-slide-in-right">
               <img
                 src={aboutOfficeImage}
                 alt="Repairhost Solutions Office"
-                className="rounded-lg shadow-enterprise w-full h-auto"
+                className="rounded-lg shadow-enterprise w-full h-auto hover:scale-105 transition-transform duration-300"
               />
             </div>
           </div>

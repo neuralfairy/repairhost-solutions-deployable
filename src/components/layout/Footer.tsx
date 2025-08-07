@@ -29,7 +29,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-gradient-silver border-t border-border">
+    <footer className="bg-gradient-silver border-t border-border animate-fade-in">
       <div className="mx-auto max-w-7xl px-6 py-12 lg:px-8">
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div className="space-y-8">
@@ -62,19 +62,19 @@ const Footer = () => {
                 <ul role="list" className="mt-6 space-y-4">
                   {footerLinks.company.map((item) => (
                     <li key={item.name}>
-                      {item.href.startsWith('http') ? (
+                       {item.href.startsWith('http') ? (
                         <a
                           href={item.href}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-sm leading-6 text-muted-foreground hover:text-primary transition-colors"
+                          className="text-sm leading-6 text-muted-foreground hover:text-primary transition-all duration-200 hover:scale-105 relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-primary after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left"
                         >
                           {item.name}
                         </a>
                       ) : (
                         <Link
                           to={item.href}
-                          className="text-sm leading-6 text-muted-foreground hover:text-primary transition-colors"
+                          className="text-sm leading-6 text-muted-foreground hover:text-primary transition-all duration-200 hover:scale-105 relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-primary after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left"
                         >
                           {item.name}
                         </Link>
@@ -170,7 +170,7 @@ const Footer = () => {
                 href="https://salescentri.com?utm_source=repairhost.com&utm_medium=footer&utm_campaign=partner_network" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="hover:text-primary transition-colors"
+                className="hover:text-primary transition-all duration-200 hover:scale-105 relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-primary after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left"
               >
                 Powered by Sales Intelligence Platform
               </a>

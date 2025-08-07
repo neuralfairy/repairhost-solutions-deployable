@@ -20,10 +20,10 @@ const Header = () => {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <header className="bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50 w-full border-b border-border/40">
+    <header className="bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50 w-full border-b border-border/40 animate-fade-in">
       <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
         <div className="flex lg:flex-1">
-          <Link to="/" className="-m-1.5 p-1.5">
+          <Link to="/" className="-m-1.5 p-1.5 hover:scale-105 transition-transform duration-200">
             <span className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent">
               Repairhost Solutions
             </span>
@@ -45,7 +45,7 @@ const Header = () => {
             <Link
               key={item.name}
               to={item.href}
-              className={`text-sm font-semibold leading-6 transition-colors hover:text-primary ${
+              className={`text-sm font-semibold leading-6 transition-all duration-200 hover:text-primary hover:scale-105 relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-primary after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left ${
                 isActive(item.href) ? "text-primary" : "text-foreground"
               }`}
             >
@@ -55,12 +55,12 @@ const Header = () => {
         </div>
         
         <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:gap-x-4">
-          <Button variant="outline" asChild>
+          <Button variant="outline" className="hover:scale-105 transition-all duration-200" asChild>
             <a href="https://salescentri.com/get-started/free-trial" target="_blank" rel="noopener noreferrer">
               Free Trial
             </a>
           </Button>
-          <Button asChild className="bg-gradient-primary hover:opacity-90 shadow-button-custom">
+          <Button asChild className="bg-gradient-primary hover:opacity-90 shadow-button-custom hover:scale-105 transition-all duration-200">
             <a href="https://salescentri.com/get-started/book-demo" target="_blank" rel="noopener noreferrer">
               Book Demo
             </a>

@@ -175,7 +175,7 @@ const FAQ = () => {
       {/* FAQ Categories */}
       <div className="py-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl text-center mb-16">
+          <div className="mx-auto max-w-2xl text-center mb-16 animate-fade-in-up">
             <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
               Browse by Category
             </h2>
@@ -196,11 +196,11 @@ const FAQ = () => {
                 
                 <Accordion type="single" collapsible className="space-y-4">
                   {category.questions.map((faq, index) => (
-                    <AccordionItem key={index} value={`${categoryIndex}-${index}`} className="border border-border rounded-lg px-6">
-                      <AccordionTrigger className="text-left text-lg font-semibold hover:text-primary">
+                    <AccordionItem key={index} value={`${categoryIndex}-${index}`} className={`border border-border rounded-lg px-6 group hover:bg-accent/10 transition-colors duration-200 animate-fade-in-up delay-${index * 100}`}>
+                      <AccordionTrigger className="text-left text-lg font-semibold hover:text-primary group-hover:text-primary transition-colors duration-200">
                         {faq.q}
                       </AccordionTrigger>
-                      <AccordionContent className="text-muted-foreground text-base leading-relaxed">
+                      <AccordionContent className="text-muted-foreground text-base leading-relaxed group-hover:text-foreground transition-colors duration-200">
                         {faq.a}
                       </AccordionContent>
                     </AccordionItem>

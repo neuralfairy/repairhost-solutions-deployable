@@ -124,7 +124,7 @@ const Pricing = () => {
       {/* Pricing Plans */}
       <div className="py-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-4xl text-center">
+          <div className="mx-auto max-w-4xl text-center animate-fade-in-up">
             <h2 className="text-base font-semibold leading-7 text-primary">Pricing Plans</h2>
             <p className="mt-2 text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
               Choose your CRM implementation plan
@@ -135,8 +135,8 @@ const Pricing = () => {
             {plans.map((plan, index) => (
               <Card 
                 key={plan.name} 
-                className={`shadow-card-custom hover:shadow-enterprise transition-all duration-300 animate-fade-in ${
-                  plan.popular ? 'ring-2 ring-primary scale-105' : ''
+                className={`shadow-card-custom hover:shadow-enterprise transition-all duration-300 animate-fade-in-up group hover:scale-105 ${
+                  plan.popular ? 'ring-2 ring-primary scale-105' : 'hover:ring-primary/50'
                 }`}
                 style={{animationDelay: `${index * 0.1}s`}}
               >
@@ -169,10 +169,10 @@ const Pricing = () => {
                   </ul>
                   
                   <Button 
-                    className={`w-full ${
+                    className={`w-full group-hover:scale-105 transition-all duration-200 ${
                       plan.popular 
-                        ? 'bg-gradient-primary hover:opacity-90 shadow-button-custom' 
-                        : ''
+                        ? 'bg-gradient-primary hover:opacity-90 shadow-button-custom shadow-lg hover:shadow-enterprise' 
+                        : 'hover:shadow-lg'
                     }`}
                     variant={plan.popular ? 'default' : 'outline'}
                     asChild
