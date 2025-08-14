@@ -100,7 +100,7 @@ const HeroSection = () => {
                 <Button 
                   size="lg"
                   variant="outline"
-                  className="border-white/30 text-white hover:bg-white/10"
+                  className="border-white/30 text-primary hover:bg-white/10"
                   asChild
                 >
                   <a href="https://salescentri.com/solutions/use-case-navigator/demo" target="_blank" rel="noopener noreferrer">
